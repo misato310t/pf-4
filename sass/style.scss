@@ -191,6 +191,9 @@ header{
 
 .top{
   margin-top: 70px;
+  @include mq(tab) {
+     margin-bottom: 62px; 
+  }
 }
 .top-img{
     width: 990px;
@@ -200,6 +203,11 @@ header{
        height: 415px;
        object-fit: cover;
        object-position: 70% 70%;
+    }
+    @include mq(tab) {
+       height: auto;
+       width: 100%;
+       object-fit: cover; 
     }
 }
 
@@ -211,6 +219,9 @@ header{
     margin-bottom: 100px;
     @include mq(sp) {
        margin-bottom: 0; 
+    }
+    @include mq(tab) {
+       margin-bottom: 50px; 
     }
 }
 
@@ -242,6 +253,7 @@ header{
         .top-br{
             display: none;
         }
+        font-size: 24px;
     }
     @include mq(tab) {
         font-size: 20px;
@@ -276,22 +288,39 @@ header{
        font-size: 30px; 
        margin: 10px 0 40px;
     }
+    @include mq(tab) {
+       margin: 30px 0 50px; 
+    }
+}
+
+.concept{
+    @include mq(tab) {
+       height: 37vh; 
+    }
 }
 
 .concept-inner{
     display: flex;
     margin-bottom: 100px;
+    position: relative;
     @include mq(sp) {
        display: block; 
+       margin-bottom: 50px;
+    }
+    @include mq(tab) {
+       margin-bottom: 0; 
+       padding-top: 15px;
     }
 }
 
 .concept-img{
     width: 50%;
-    height: 400px;
+    height:auto;
     @include mq(sp) {
        width: 100%; 
        height: auto;
+    }
+    @include mq(tab) {
     }
 }
 
@@ -305,6 +334,12 @@ header{
        margin-left: 0;
     }
     @include mq(tab) {
+        padding-top: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 45%;
+        width: 45%;
     }
 }
 
@@ -312,6 +347,10 @@ header{
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
+    @include mq(sp) {
+       font-size: 18px; 
+       padding-top: 10px;
+    }
 }
 
 .feature-wrapper{
@@ -333,11 +372,21 @@ header{
        width: 100%; 
        margin-bottom: 30px;
     }
+    @include mq(tab) {
+       width: 100%; 
+       padding: 0 10px;
+    }
 }
 
 .feature-text{
     padding: 32px 90px;
     font-weight: 600;
+    @include mq(sp) {
+       padding: 20px 40px; 
+    }
+    @include mq(tab) {
+       padding: 20px ; 
+    }
 }
 
 .feature-img2{
@@ -353,7 +402,10 @@ header{
        background: url(../img/bg.png)no-repeat; 
        background-size: cover;
        object-fit: cover;
-       height: 484px;
+       height: 604px;
+    }
+    @include mq(tab) {
+       background-position: 50% 30%; 
     }
     &::after{
        position: absolute;
@@ -399,6 +451,12 @@ header{
     }
 }
 
+.sp-br{
+    @include mq(sp) {
+       display: none; 
+    }
+}
+
 .products{
     width: 940px;
     max-width: 100%;
@@ -409,7 +467,9 @@ header{
        margin-bottom: 50px;
     }
     @include mq(tab) {
+        width: 100%;
         padding: 0 24px;
+        margin-bottom: 70px;
     }
 }
 
@@ -423,11 +483,18 @@ header{
       margin-bottom: 0;
       height: auto;
    }
+   @include mq(tab) {
+   }
 }
 
 .products-item{
     @include mq(sp) {
        width: 100%;
+    }
+    @include mq(tab) {
+       width: 33.3%; 
+       text-align: center;
+       display: inline;
     }
 }
 
@@ -439,6 +506,9 @@ header{
        margin: 0 auto;
        margin-bottom: 24px;
     }
+    @include mq(tab) {
+        width: 95%;
+    }
 }
 
 .products-text{
@@ -449,6 +519,11 @@ header{
     @include mq(sp) {
         margin: 0 auto;
         margin-bottom: 16px;
+    }
+    @include mq(tab) {
+       width: 90%; 
+       text-align: left;
+       padding: 0 10px 0 30px;
     }
 }
 
@@ -494,9 +569,9 @@ header{
     margin: 0 auto 120px;
     @include mq(sp) {
        height: auto; 
-       width: 311px;
        max-width: 100%;
        margin: 0 auto;
+       padding: 0 10px;
     }
 }
 
@@ -507,6 +582,9 @@ header{
     border-bottom: solid 1px #60606029;
     @include mq(sp) {
        display: block; 
+    }
+    @include mq(tab) {
+       padding: 24px 10px; 
     }
 }
 
@@ -519,7 +597,7 @@ header{
         transition-duration: 0.3s;
     }
     @include mq(sp) {
-       width: 310px; 
+       width: 100%; 
        height: 191px;
        -o-object-fit: cover;
     }
@@ -621,9 +699,12 @@ header{
     font-weight: bold;
     margin-bottom: 48px;
     @include mq(sp) {
-       font-size: 25px;
+       font-size: 20px;
        margin-bottom: 30px; 
        
+    }
+    @include mq(tab) {
+       margin: -30px 0 30px; 
     }
 }
 
@@ -653,7 +734,10 @@ header{
    }
    @include mq(sp) {
       margin: 200px auto 0;
-      padding: 50px 0 57px; 
+      padding: 50px 10px 57px; 
+   }
+   @include mq(tab) {
+      margin: 320px auto 0; 
    }
 }
 
@@ -668,11 +752,12 @@ header{
         margin-left: auto;
         @include mq(sp) {
            display: block; 
+           margin-left: 15px;
         }
     }
     
     @include mq(sp) {
-       width: 320px;
+       width: 90%;
        margin: 0 auto;
     }
 }
@@ -690,7 +775,7 @@ header{
         font-size: 18px;
     }
     @include mq(sp) {
-       margin-bottom: 5px; 
+       margin-bottom:  5px; 
     }
     &.is-name{
         @include mq(sp) {
@@ -701,9 +786,9 @@ header{
     &.is-select{
         @include mq(sp) {
            display: block; margin-bottom: 5px;
-
         }
     }
+
 }
 
 .triangle{
@@ -740,7 +825,8 @@ header{
     margin-left: 20px;
     border: none;
     @include mq(sp) {
-       margin-left: 0; 
+       margin-left: 0;
+       width: 100%; 
     }
 }
 
@@ -751,6 +837,7 @@ header{
     border: none;
     @include mq(sp) {
        margin: 0; 
+       width: 100%;
     }
 }
 
@@ -806,7 +893,7 @@ input[type=checkbox] {
     }
     @include mq(sp) {
        transform: none; 
-       padding: 5px 30px;
+       padding: 5px 10px 5px 30px;
        width: 100%;
        margin: 0 auto ;
     }
