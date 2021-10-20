@@ -361,6 +361,9 @@ header{
        display: block; 
        margin-bottom: 80px;
     }
+    @include mq(tab) {
+       margin: 66px 0 100px; 
+    }
 }
 
 .feature-items{

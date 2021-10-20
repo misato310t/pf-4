@@ -445,6 +445,12 @@ header li {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+  .feature-wrapper {
+    margin: 66px 0 100px;
+  }
+}
+
 .feature-items {
   display: block;
   width: 340px;
