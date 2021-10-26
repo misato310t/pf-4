@@ -165,7 +165,7 @@ header li {
   width: 270px;
   height: 100%;
   position: fixed;
-  top: 70;
+  top: 70px;
   right: 0;
   background: #3EA1D1;
   z-index: 14;
@@ -349,12 +349,6 @@ header li {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
-  .concept {
-    height: 37vh;
-  }
-}
-
 .concept-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -426,6 +420,10 @@ header li {
     font-size: 18px;
     padding-top: 10px;
   }
+}
+
+.feature {
+  margin-top: 68px;
 }
 
 .feature-wrapper {

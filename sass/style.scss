@@ -162,7 +162,7 @@ header{
     width: 270px;
     height: 100%;
     position: fixed;
-    top: 70;
+    top: 70px;
     right: 0;
     background:$color-main;
     z-index: 14;
@@ -293,11 +293,6 @@ header{
     }
 }
 
-.concept{
-    @include mq(tab) {
-       height: 37vh; 
-    }
-}
 
 .concept-inner{
     display: flex;
@@ -351,6 +346,10 @@ header{
        font-size: 18px; 
        padding-top: 10px;
     }
+}
+
+.feature{
+    margin-top: 68px;
 }
 
 .feature-wrapper{
